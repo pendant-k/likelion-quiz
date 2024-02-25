@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:likelion_quiz/palette.dart';
-import 'package:likelion_quiz/quiz.dart';
-import 'package:likelion_quiz/result.dart';
+import 'package:likelion_quiz/view/s_quiz.dart';
+import 'package:likelion_quiz/view/s_result.dart';
 
 void main() {
   runApp(const MyApp());

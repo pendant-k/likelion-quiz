@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:likelion_quiz/model.dart';
+import 'package:likelion_quiz/model/quiz_model.dart';
 import 'package:likelion_quiz/palette.dart';
-import 'package:likelion_quiz/quiz_controller.dart';
-import 'package:likelion_quiz/quiz_data.dart';
-import 'package:likelion_quiz/result.dart';
+import 'package:likelion_quiz/controller/quiz_controller.dart';
+import 'package:likelion_quiz/model/quiz_data.dart';
+import 'package:likelion_quiz/view/s_result.dart';
 
 class QuizPage extends StatefulWidget {
   const QuizPage({super.key});
@@ -47,7 +47,7 @@ class _QuizPageState extends State<QuizPage> {
       _controller.currentAnswer = "";
 
       if (_quizIndex == quiz_list.length - 1) {
-        Get.off(() => ResultPage(result: _totalScore, time: _time));
+        Get.off(() => ResultScreen(result: _totalScore, time: _time));
       } else {
         setState(() {
           _quizIndex += 1;
@@ -77,7 +77,7 @@ class _QuizPageState extends State<QuizPage> {
                   end: Duration.zero,
                 ),
                 onEnd: () {
-                  Get.off(() => ResultPage(
+                  Get.off(() => ResultScreen(
                         result: _totalScore,
                         time: 60,
                       ));
@@ -88,9 +88,7 @@ class _QuizPageState extends State<QuizPage> {
                   return Padding(
                     padding: EdgeInsets.symmetric(vertical: 5),
                     child: Text(
-                      seconds < 10
-                          ? '남은 시간 : 0$minutes:0$seconds'
-                          : '남은 시간 : 0$minutes:$seconds',
+                      seconds < 10 ? '남은 시간 : 0$minutes:0$seconds' : '남은 시간 : 0$minutes:$seconds',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,
@@ -162,6 +160,7 @@ class ChoiceQuiz extends StatefulWidget {
 class _ChoiceQuizState extends State<ChoiceQuiz> {
   @override
   Widget build(BuildContext context) {
+    // dependency injection for QuizController
     final _controller = Get.put(QuizController());
     return Column(
       mainAxisSize: MainAxisSize.min,

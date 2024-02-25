@@ -3,9 +3,17 @@ import 'package:get/get.dart';
 import 'package:likelion_quiz/main.dart';
 import 'package:likelion_quiz/palette.dart';
 
-class ResultPage extends StatelessWidget {
-  const ResultPage({super.key, required this.result, required this.time});
+class ResultScreen extends StatelessWidget {
+  const ResultScreen({
+    super.key,
+    required this.result,
+    required this.time,
+  });
+
+  /// 맞힌 갯수
   final int result;
+
+  /// 걸린 시간
   final int time;
 
   @override

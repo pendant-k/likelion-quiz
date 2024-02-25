@@ -7,7 +7,8 @@ class QuizController extends GetxController {
   set currentAnswer(value) => this._currentAnswer.value = value;
   get currentAnswer => this._currentAnswer.value;
 
-  void setCurrentAnswer(String value) {
-    currentAnswer = value;
-  }
+  /// 총 점수
+  final _score = 0.obs;
+  set score(value) => this._score.value = value;
+  get score => this._score.value;
 }

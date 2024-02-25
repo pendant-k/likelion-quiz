@@ -1,4 +1,4 @@
-import 'package:likelion_quiz/model.dart';
+import 'package:likelion_quiz/model/quiz_model.dart';
 
 final quiz_list = [
   Quiz(
@@ -75,8 +75,7 @@ final quiz_list = [
   ),
   Quiz(
     type: QuizType.choice,
-    question:
-        'Q9) 태그에서 설정한 id나 class 속성에 따라 css를 지정하게 될 때, id 값에 따라 CSS를 설정할 때 사용해야하는 선택자는?',
+    question: 'Q9) 태그에서 설정한 id나 class 속성에 따라 css를 지정하게 될 때, id 값에 따라 CSS를 설정할 때 사용해야하는 선택자는?',
     choice1: '#',
     choice2: '.',
     choice3: ':',
@@ -94,8 +93,7 @@ final quiz_list = [
   ),
   Quiz(
     type: QuizType.choice,
-    question:
-        'Q11) CSS에서 태그 요소가 어떻게 보일지 설정하는 속성으로 display 속성이 있다. 그 속성값이 될 수 없는 것은?',
+    question: 'Q11) CSS에서 태그 요소가 어떻게 보일지 설정하는 속성으로 display 속성이 있다. 그 속성값이 될 수 없는 것은?',
     choice1: 'block',
     choice2: 'block-inline',
     choice3: 'inline',
