@@ -56,7 +56,7 @@ class _QuizScreenState extends State<QuizScreen> {
     }
 
     return Scaffold(
-      backgroundColor: Palette.MAINCOLOR,
+      backgroundColor: Palette.background,
       body: Container(
         width: double.infinity,
         alignment: Alignment.center,
@@ -87,7 +87,7 @@ class _QuizScreenState extends State<QuizScreen> {
                 height: 50,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
+                    backgroundColor: Palette.MAINCOLOR,
                   ),
                   onPressed: () {
                     _next();
@@ -140,8 +140,9 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
         Text(
           widget.quizContent,
           style: TextStyle(
+            fontFamily: "Gmarket",
             fontSize: 30,
-            color: Colors.white,
+            color: Colors.black,
           ),
         ),
         SizedBox(
@@ -150,7 +151,7 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
         ListTile(
           leading: Obx(
             () => Radio(
-                activeColor: Colors.white,
+                activeColor: Palette.MAINCOLOR,
                 value: "1",
                 groupValue: _controller.currentAnswer,
                 onChanged: (value) {
@@ -160,7 +161,8 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
           title: Text(
             widget.label1,
             style: TextStyle(
-              color: Colors.white,
+              fontFamily: "Gmarket",
+              color: Colors.black,
               fontSize: 16,
             ),
           ),
@@ -168,7 +170,7 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
         ListTile(
           leading: Obx(
             () => Radio(
-                activeColor: Colors.white,
+                activeColor: Palette.MAINCOLOR,
                 value: "2",
                 groupValue: _controller.currentAnswer,
                 onChanged: (value) {
@@ -178,14 +180,15 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
           title: Text(
             widget.label2,
             style: TextStyle(
-              color: Colors.white,
+              fontFamily: "Gmarket",
+              color: Colors.black,
               fontSize: 16,
             ),
           ),
         ),
         ListTile(
           leading: Obx(() => Radio(
-                activeColor: Colors.white,
+                activeColor: Palette.MAINCOLOR,
                 value: "3",
                 groupValue: _controller.currentAnswer,
                 onChanged: (value) {
@@ -195,14 +198,14 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
           title: Text(
             widget.label3,
             style: TextStyle(
-              color: Colors.white,
-              fontSize: 16,
+              fontFamily: "Gmarket",
+              color: Colors.black,
             ),
           ),
         ),
         ListTile(
           leading: Obx(() => Radio(
-                activeColor: Colors.white,
+                activeColor: Palette.MAINCOLOR,
                 value: "4",
                 groupValue: _controller.currentAnswer,
                 onChanged: (value) {
@@ -212,7 +215,8 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
           title: Text(
             widget.label4,
             style: TextStyle(
-              color: Colors.white,
+              fontFamily: "Gmarket",
+              color: Colors.black,
               fontSize: 16,
             ),
           ),
