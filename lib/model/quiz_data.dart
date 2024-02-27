@@ -3,7 +3,7 @@ import 'package:likelion_quiz/model/quiz_model.dart';
 final quiz_list = [
   Quiz(
     type: QuizType.choice,
-    question: 'Q1) 다음 중 프로그래밍 언어가 아닌 것은?',
+    question: '다음 중 프로그래밍 언어가 아닌 것은?',
     choice1: 'C',
     choice2: 'HTML',
     choice3: 'Javascript',
@@ -12,7 +12,7 @@ final quiz_list = [
   ),
   Quiz(
     type: QuizType.choice,
-    question: 'Q2) 다음 중 성균관대 멋쟁이사자처럼의 인스타그램 계정으로 옳은 것은?',
+    question: '다음 중 성균관대 멋쟁이사자처럼의 인스타그램 계정으로 옳은 것은?',
     choice1: 'skku_likelion',
     choice2: 'likelion_skku',
     choice3: 'Likelionskku',
@@ -21,7 +21,7 @@ final quiz_list = [
   ),
   Quiz(
     type: QuizType.choice,
-    question: 'Q3) HTML에서 태그를 나타내는 방법으로 옳은 것은?',
+    question: 'HTML에서 태그를 나타내는 방법으로 옳은 것은?',
     choice1: '소괄호 ()',
     choice2: '중괄호 {}',
     choice3: '대괄호 []',
@@ -30,7 +30,7 @@ final quiz_list = [
   ),
   Quiz(
     type: QuizType.choice,
-    question: 'Q4) HTML에서 <br> 태그의 역할로 올바른 것은?',
+    question: 'HTML에서 <br> 태그의 역할로 올바른 것은?',
     choice1: '개행 (줄바꾸기)',
     choice2: '구분선 생성',
     choice3: '문단 생성',
@@ -39,7 +39,7 @@ final quiz_list = [
   ),
   Quiz(
     type: QuizType.choice,
-    question: 'Q5) HTML <a> 태그에서 링크의 목적지가 되는 URL을 담는 속성으로 옳은 것은?',
+    question: 'HTML <a> 태그에서 링크의 목적지가 되는 URL을 담는 속성으로 옳은 것은?',
     choice1: 'src',
     choice2: 'href',
     choice3: 'url',
@@ -48,7 +48,7 @@ final quiz_list = [
   ),
   Quiz(
     type: QuizType.choice,
-    question: 'Q6) 다음 중 성균관대 멋쟁이사자처럼 고유 사자 캐릭터의 갈기 개수는?',
+    question: '다음 중 성균관대 멋쟁이사자처럼 고유 사자 캐릭터의 갈기 개수는?',
     choice1: '8개',
     choice2: '9개',
     choice3: '10개',
@@ -57,7 +57,7 @@ final quiz_list = [
   ),
   Quiz(
     type: QuizType.choice,
-    question: 'Q7) 웹 페이지의 레이아웃을 설정하는 CSS를 작성하는 태그는?',
+    question: '웹 페이지의 레이아웃을 설정하는 CSS를 작성하는 태그는?',
     choice1: '<css></css>',
     choice2: '<style></style>',
     choice3: '<script></script>',
@@ -66,7 +66,7 @@ final quiz_list = [
   ),
   Quiz(
     type: QuizType.choice,
-    question: 'Q8) CSS에서 글자 색깔을 설정하는 속성은?',
+    question: 'CSS에서 글자 색깔을 설정하는 속성은?',
     choice1: 'text-color',
     choice2: 'font-color',
     choice3: 'color',
@@ -75,7 +75,7 @@ final quiz_list = [
   ),
   Quiz(
     type: QuizType.choice,
-    question: 'Q9) 태그에서 설정한 id나 class 속성에 따라 css를 지정하게 될 때, id 값에 따라 CSS를 설정할 때 사용해야하는 선택자는?',
+    question: '태그에서 설정한 id나 class 속성에 따라 css를 지정하게 될 때, id 값에 따라 CSS를 설정할 때 사용해야하는 선택자는?',
     choice1: '#',
     choice2: '.',
     choice3: ':',
@@ -84,7 +84,7 @@ final quiz_list = [
   ),
   Quiz(
     type: QuizType.choice,
-    question: 'Q10) 다음 중 Javascript에서 실행했을 때 출력값이 다른 하나는?',
+    question: '다음 중 Javascript에서 실행했을 때 출력값이 다른 하나는?',
     choice1: 'console.log("카카오" != "네이버")',
     choice2: 'console.log("카카오" !== "네이버")',
     choice3: 'console.log("1" == 1)',
@@ -93,7 +93,7 @@ final quiz_list = [
   ),
   Quiz(
     type: QuizType.choice,
-    question: 'Q11) CSS에서 태그 요소가 어떻게 보일지 설정하는 속성으로 display 속성이 있다. 그 속성값이 될 수 없는 것은?',
+    question: 'CSS에서 태그 요소가 어떻게 보일지 설정하는 속성으로 display 속성이 있다. 그 속성값이 될 수 없는 것은?',
     choice1: 'block',
     choice2: 'block-inline',
     choice3: 'inline',
@@ -102,7 +102,7 @@ final quiz_list = [
   ),
   Quiz(
     type: QuizType.choice,
-    question: 'Q12) 다음 중 Javascript에서 배열을 작성하는 방법으로 옳은 것은?',
+    question: '다음 중 Javascript에서 배열을 작성하는 방법으로 옳은 것은?',
     choice1: 'var colors = 1 ("red"), 2 = ("green"), 3 = ("blue")',
     choice2: 'var colors = ("red","green","blue")',
     choice3: 'var colors = ["red","green","blue"]',
@@ -111,7 +111,7 @@ final quiz_list = [
   ),
   Quiz(
     type: QuizType.choice,
-    question: 'Q13) 다음 중 Javascript에서 주석을 작성하는 방법으로 옳은 것은?',
+    question: '다음 중 Javascript에서 주석을 작성하는 방법으로 옳은 것은?',
     choice1: '// 주석',
     choice2: '# 주석',
     choice3: '<!-- 주석 -->',
@@ -120,7 +120,7 @@ final quiz_list = [
   ),
   Quiz(
     type: QuizType.choice,
-    question: 'Q14) 다음 중 Javascript에서 조건문을 작성하는 방법으로 옳은 것은?',
+    question: '다음 중 Javascript에서 조건문을 작성하는 방법으로 옳은 것은?',
     choice1: 'if i == 5 then',
     choice2: 'if i = 5 then',
     choice3: 'if(i == 5)',
@@ -129,7 +129,7 @@ final quiz_list = [
   ),
   Quiz(
     type: QuizType.choice,
-    question: 'Q15) 회장단을 포함하여 멋쟁이사자처럼 11기 운영진 인원은 총 몇명인가?',
+    question: '회장단을 포함하여 멋쟁이사자처럼 12기 운영진 인원은 총 몇명인가?',
     choice1: '8',
     choice2: '12',
     choice3: '15',
