@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:likelion_quiz/main.dart';
 import 'package:likelion_quiz/palette.dart';
+import 'package:likelion_quiz/view/s_home.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({
@@ -119,7 +119,7 @@ class ResultScreen extends StatelessWidget {
                   backgroundColor: Colors.white,
                 ),
                 onPressed: () {
-                  Get.offAll(() => MainPage());
+                  Get.offAll(() => HomeScreen());
                 },
                 child: Text(
                   '메인 화면으로',

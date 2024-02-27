@@ -45,3 +45,5 @@ app.*.map.json
 
 # web files
 /web/
+
+# firebase files
