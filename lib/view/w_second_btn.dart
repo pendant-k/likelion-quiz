@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:likelion_quiz/constants.dart';
 import 'package:likelion_quiz/palette.dart';
 
-/// [MainBtn] is a custom widget that is used to create a button with a custom width, height, and background color.
-class MainBtn extends StatelessWidget {
-  const MainBtn({
+/// [SecondBtn] is a custom widget that is used to create a button with a custom width, height, and background color.
+class SecondBtn extends StatelessWidget {
+  const SecondBtn({
     super.key,
     this.width,
     this.height,
@@ -38,15 +38,18 @@ class MainBtn extends StatelessWidget {
         alignment: Alignment.center,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(Constants.radius),
-          color: backgroundColor ?? Palette.MAINCOLOR,
+          border: Border.all(
+            color: Palette.MAINCOLOR,
+            width: 2,
+          ),
+          color: backgroundColor ?? Colors.white,
         ),
         child: Text(
           label,
           style: TextStyle(
-            fontFamily: 'Gmarket',
             color: Colors.white,
-            fontSize: 24,
-            fontWeight: FontWeight.w500,
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),

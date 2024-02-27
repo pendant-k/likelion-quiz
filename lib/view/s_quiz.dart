@@ -8,14 +8,14 @@ import 'package:likelion_quiz/controller/quiz_controller.dart';
 import 'package:likelion_quiz/model/quiz_data.dart';
 import 'package:likelion_quiz/view/s_result.dart';
 
-class QuizPage extends StatefulWidget {
-  const QuizPage({super.key});
+class QuizScreen extends StatefulWidget {
+  const QuizScreen({super.key});
 
   @override
-  State<QuizPage> createState() => _QuizPageState();
+  State<QuizScreen> createState() => _QuizScreenState();
 }
 
-class _QuizPageState extends State<QuizPage> {
+class _QuizScreenState extends State<QuizScreen> {
   int _quizIndex = 0;
   int _totalScore = 0;
   int _time = 0;
@@ -25,9 +25,9 @@ class _QuizPageState extends State<QuizPage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    timer = Timer.periodic(Duration(seconds: 1), (Timer t) {
-      _time++;
-    });
+    // timer = Timer.periodic(Duration(seconds: 1), (Timer t) {
+    //   _time++;
+    // });
   }
 
   @override
@@ -70,35 +70,6 @@ class _QuizPageState extends State<QuizPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TweenAnimationBuilder(
-                duration: Duration(minutes: 1, seconds: 1),
-                tween: Tween(
-                  begin: Duration(minutes: 1, seconds: 1),
-                  end: Duration.zero,
-                ),
-                onEnd: () {
-                  Get.off(() => ResultScreen(
-                        result: _totalScore,
-                        time: 60,
-                      ));
-                },
-                builder: (context, value, child) {
-                  final minutes = value.inMinutes;
-                  final seconds = value.inSeconds % 60;
-                  return Padding(
-                    padding: EdgeInsets.symmetric(vertical: 5),
-                    child: Text(
-                      seconds < 10 ? '남은 시간 : 0$minutes:0$seconds' : '남은 시간 : 0$minutes:$seconds',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 14,
-                      ),
-                    ),
-                  );
-                },
-              ),
               if (quiz_list[_quizIndex].type == QuizType.choice)
                 ChoiceQuiz(
                   quizContent: quiz_list[_quizIndex].question,

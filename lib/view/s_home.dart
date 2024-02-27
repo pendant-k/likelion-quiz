@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:likelion_quiz/palette.dart';
 import 'package:likelion_quiz/view/s_quiz.dart';
 import 'package:likelion_quiz/view/w_main_btn.dart';
+import 'package:likelion_quiz/view/w_second_btn.dart';
 
 /// 홈화면 위젯
 class HomeScreen extends StatefulWidget {
@@ -16,20 +17,27 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(),
       appBar: AppBar(
+        leading: Builder(
+          builder: (context) {
+            return IconButton(
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+              icon: Icon(
+                Icons.menu_rounded,
+                color: Colors.white,
+                size: 28,
+              ),
+            );
+          },
+        ),
         title: Image.asset(
           'images/logo_white.png',
           width: 300,
         ),
         backgroundColor: Palette.MAINCOLOR,
-        leading: IconButton(
-          icon: Icon(
-            Icons.menu_rounded,
-            color: Colors.white,
-            size: 30.0,
-          ),
-          onPressed: () {},
-        ),
       ),
       backgroundColor: Palette.background,
       body: Container(
@@ -53,21 +61,25 @@ class _HomeScreenState extends State<HomeScreen> {
                 Text(
                   '성균관대학교 멋쟁이사자처럼',
                   style: TextStyle(
+                    fontFamily: 'Gmarket',
                     fontSize: 24,
                     color: Colors.black,
                   ),
                 ),
               ],
             ),
+            SizedBox(height: 8),
             Text(
               '웹 프로그래밍 스피드 퀴즈',
               style: TextStyle(
-                fontSize: 50,
+                fontFamily: 'agro',
+                fontWeight: FontWeight.bold,
+                fontSize: 60,
                 color: Colors.black,
               ),
             ),
             SizedBox(
-              height: 100,
+              height: 80,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -88,9 +100,12 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
             SizedBox(
-              height: 50,
+              height: 80,
             ),
             MainBtn(
+              onTap: () {
+                Get.to(() => QuizScreen());
+              },
               label: '시작하기',
             ),
           ],
@@ -124,6 +139,7 @@ class HomeItem extends StatelessWidget {
         color: Colors.white,
       ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Icon(
@@ -136,7 +152,8 @@ class HomeItem extends StatelessWidget {
             title,
             // '상품 기준',
             style: TextStyle(
-              fontSize: 30,
+              fontSize: 24,
+              fontFamily: 'Gmarket',
               fontWeight: FontWeight.w500,
               color: Colors.black,
             ),
@@ -148,7 +165,8 @@ class HomeItem extends StatelessWidget {
             body1,
             // '- 참여만 해도 간식 제공',
             style: TextStyle(
-              fontSize: 20,
+              fontSize: 16,
+              fontFamily: 'Gmarket',
               color: Colors.black,
             ),
           ),
@@ -156,7 +174,8 @@ class HomeItem extends StatelessWidget {
             body2,
             // '- 가장 많은 문제를 맞춘 3등까지 기프티콘 선물',
             style: TextStyle(
-              fontSize: 20,
+              fontSize: 16,
+              fontFamily: 'Gmarket',
               color: Colors.black,
             ),
           ),
