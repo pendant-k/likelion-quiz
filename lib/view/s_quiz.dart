@@ -67,32 +67,28 @@ class _QuizScreenState extends State<QuizScreen> {
           horizontal: 250,
           vertical: 100,
         ),
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              if (quiz_list[_controller.quizIndex].type == QuizType.choice)
-                Obx(
-                  () => ChoiceQuiz(
-                    quizContent: quiz_list[_controller.quizIndex].question,
-                    label1: quiz_list[_controller.quizIndex].choice1!,
-                    label2: quiz_list[_controller.quizIndex].choice2!,
-                    label3: quiz_list[_controller.quizIndex].choice3!,
-                    label4: quiz_list[_controller.quizIndex].choice4!,
-                  ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            if (quiz_list[_controller.quizIndex].type == QuizType.choice)
+              Obx(
+                () => ChoiceQuiz(
+                  quizContent: quiz_list[_controller.quizIndex].question,
+                  label1: quiz_list[_controller.quizIndex].choice1!,
+                  label2: quiz_list[_controller.quizIndex].choice2!,
+                  label3: quiz_list[_controller.quizIndex].choice3!,
+                  label4: quiz_list[_controller.quizIndex].choice4!,
                 ),
-              if (quiz_list[_quizIndex].type == QuizType.short) Container(),
-              SizedBox(
-                height: 100,
               ),
-              MainBtn(
-                label: "다음",
-                onTap: () => _controller.next(),
-              ),
-            ],
-          ),
+            if (quiz_list[_quizIndex].type == QuizType.short) Container(),
+            Spacer(),
+            MainBtn(
+              label: "다음",
+              onTap: () => _controller.next(),
+            ),
+          ],
         ),
       ),
     );
@@ -141,8 +137,10 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
         SizedBox(
           height: 20,
         ),
-        SizedBox(
-          width: 400,
+        Container(
+          width: 500,
+          height: 150,
+          alignment: Alignment.center,
           child: Text(
             widget.quizContent,
             style: TextStyle(
@@ -156,7 +154,7 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
           height: 50,
         ),
         SizedBox(
-          width: 400,
+          width: 500,
           child: Obx(
             () => AnimatedButton(
               borderWidth: 1,
@@ -183,7 +181,7 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
           height: 20,
         ),
         SizedBox(
-          width: 400,
+          width: 500,
           child: Obx(
             () => AnimatedButton(
               borderWidth: 1,
@@ -210,7 +208,7 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
           height: 20,
         ),
         SizedBox(
-          width: 400,
+          width: 500,
           child: Obx(
             () => AnimatedButton(
               borderWidth: 1,
@@ -237,7 +235,7 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
           height: 20,
         ),
         SizedBox(
-          width: 400,
+          width: 500,
           child: Obx(
             () => AnimatedButton(
               borderWidth: 1,

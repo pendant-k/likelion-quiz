@@ -30,26 +30,26 @@ class MainBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
+    return SizedBox(
         width: width ?? 250,
         height: height ?? 56,
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(Constants.radius),
-          color: backgroundColor ?? Palette.MAINCOLOR,
-        ),
-        child: Text(
-          label,
-          style: TextStyle(
-            fontFamily: 'Gmarket',
-            color: Colors.white,
-            fontSize: 24,
-            fontWeight: FontWeight.w500,
+        child: ElevatedButton(
+          onPressed: onTap,
+          style: ElevatedButton.styleFrom(
+            backgroundColor: backgroundColor ?? Palette.MAINCOLOR,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(Constants.radius),
+            ),
           ),
-        ),
-      ),
-    );
+          child: Text(
+            label,
+            style: TextStyle(
+              fontFamily: 'Gmarket',
+              color: Colors.white,
+              fontSize: 24,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+        ));
   }
 }

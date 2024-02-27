@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:likelion_quiz/model/quiz_data.dart';
+import 'package:likelion_quiz/view/s_result.dart';
 
 class QuizController extends GetxController {
   QuizController();
@@ -25,7 +26,10 @@ class QuizController extends GetxController {
     currentAnswer = "";
 
     if (quizIndex == quiz_list.length - 1) {
-      Get.offNamed('/result');
+      Get.to(() => ResultScreen(
+            score: score,
+            time: 10,
+          ));
     } else {
       quizIndex++;
     }
