@@ -17,22 +17,8 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
       appBar: AppBar(
-        leading: Builder(
-          builder: (context) {
-            return IconButton(
-              onPressed: () {
-                Scaffold.of(context).openDrawer();
-              },
-              icon: Icon(
-                Icons.menu_rounded,
-                color: Colors.white,
-                size: 28,
-              ),
-            );
-          },
-        ),
+        centerTitle: false,
         title: Image.asset(
           'images/logo_white.png',
           width: 300,

@@ -30,29 +30,27 @@ class SecondBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
+    return SizedBox(
         width: width ?? 250,
         height: height ?? 56,
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(Constants.radius),
-          border: Border.all(
-            color: Palette.MAINCOLOR,
-            width: 2,
+        child: ElevatedButton(
+          onPressed: onTap,
+          style: ElevatedButton.styleFrom(
+            backgroundColor: backgroundColor ?? Colors.white,
+            shape: RoundedRectangleBorder(
+              side: BorderSide(color: Colors.grey[200]!, width: 1),
+              borderRadius: BorderRadius.circular(Constants.radius),
+            ),
           ),
-          color: backgroundColor ?? Colors.white,
-        ),
-        child: Text(
-          label,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
+          child: Text(
+            label,
+            style: TextStyle(
+              fontFamily: 'Gmarket',
+              color: Colors.white,
+              fontSize: 24,
+              fontWeight: FontWeight.w500,
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }

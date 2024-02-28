@@ -36,7 +36,7 @@ class MainBtn extends StatelessWidget {
         child: ElevatedButton(
           onPressed: onTap,
           style: ElevatedButton.styleFrom(
-            backgroundColor: backgroundColor ?? Palette.MAINCOLOR,
+            backgroundColor: backgroundColor ?? Palette.btnBackground,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(Constants.radius),
             ),

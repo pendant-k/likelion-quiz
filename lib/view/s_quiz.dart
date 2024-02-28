@@ -125,17 +125,18 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Obx(
-          () => Text(
-            "Q. ${_controller.quizIndex + 1}",
-            style: TextStyle(
-              fontFamily: "Gmarket",
-              fontSize: 20,
-              color: Colors.black,
+          () => Container(
+            width: 500,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              "Q. ${_controller.quizIndex + 1}",
+              style: TextStyle(
+                fontFamily: "Gmarket",
+                fontSize: 20,
+                color: Colors.black,
+              ),
             ),
           ),
-        ),
-        SizedBox(
-          height: 20,
         ),
         Container(
           width: 500,
@@ -161,6 +162,9 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
               borderRadius: Constants.radius,
               borderColor: Colors.grey[300]!,
               animationDuration: Constants.duration,
+              selectedGradientColor: LinearGradient(
+                colors: [Color(0xFF3A8A70), Palette.MAINCOLOR],
+              ),
               isSelected: _controller.currentAnswer == "1",
               text: widget.label1,
               onPress: () {
@@ -172,7 +176,7 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
                 fontSize: 20,
               ),
               selectedTextColor: Colors.white,
-              selectedBackgroundColor: Palette.MAINCOLOR,
+              // selectedBackgroundColor: Palette.MAINCOLOR,
               transitionType: TransitionType.LEFT_TO_RIGHT,
             ),
           ),
@@ -198,8 +202,10 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
                 color: Colors.black,
                 fontSize: 20,
               ),
+              selectedGradientColor: LinearGradient(
+                colors: [Color(0xFF3A8A70), Palette.MAINCOLOR],
+              ),
               selectedTextColor: Colors.white,
-              selectedBackgroundColor: Palette.MAINCOLOR,
               transitionType: TransitionType.LEFT_TO_RIGHT,
             ),
           ),
@@ -226,7 +232,9 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
                 fontSize: 20,
               ),
               selectedTextColor: Colors.white,
-              selectedBackgroundColor: Palette.MAINCOLOR,
+              selectedGradientColor: LinearGradient(
+                colors: [Color(0xFF3A8A70), Palette.MAINCOLOR],
+              ),
               transitionType: TransitionType.LEFT_TO_RIGHT,
             ),
           ),
@@ -253,7 +261,9 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
                 fontSize: 20,
               ),
               selectedTextColor: Colors.white,
-              selectedBackgroundColor: Palette.MAINCOLOR,
+              selectedGradientColor: LinearGradient(
+                colors: [Color(0xFF3A8A70), Palette.MAINCOLOR],
+              ),
               transitionType: TransitionType.LEFT_TO_RIGHT,
             ),
           ),
