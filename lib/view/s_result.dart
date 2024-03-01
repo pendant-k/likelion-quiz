@@ -58,6 +58,7 @@ class ResultScreen extends StatelessWidget {
                 label: "기록 남기기",
                 onTap: () {},
               ),
+              SizedBox(height: 8),
               SecondBtn(
                   label: "홈으로",
                   onTap: () {

@@ -43,21 +43,6 @@ class _QuizScreenState extends State<QuizScreen> {
   Widget build(BuildContext context) {
     final _controller = Get.put(QuizController());
 
-    // _next() {
-    //   if (_controller.currentAnswer == quiz_list[_quizIndex].answer) {
-    //     _totalScore++;
-    //   }
-    //   _controller.currentAnswer = "";
-
-    //   if (_quizIndex == quiz_list.length - 1) {
-    //     Get.off(() => ResultScreen(result: _totalScore, time: _time));
-    //   } else {
-    //     setState(() {
-    //       _quizIndex += 1;
-    //     });
-    //   }
-    // }
-
     return Scaffold(
       backgroundColor: Palette.background,
       body: Container(
@@ -158,6 +143,7 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
           width: 500,
           child: Obx(
             () => AnimatedButton(
+              height: 56,
               borderWidth: 1,
               borderRadius: Constants.radius,
               borderColor: Colors.grey[300]!,
@@ -188,6 +174,7 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
           width: 500,
           child: Obx(
             () => AnimatedButton(
+              height: 56,
               borderWidth: 1,
               borderColor: Colors.grey[300]!,
               borderRadius: Constants.radius,
@@ -217,6 +204,7 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
           width: 500,
           child: Obx(
             () => AnimatedButton(
+              height: 56,
               borderWidth: 1,
               borderRadius: Constants.radius,
               borderColor: Colors.grey[300]!,
@@ -246,6 +234,7 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
           width: 500,
           child: Obx(
             () => AnimatedButton(
+              height: 56,
               borderWidth: 1,
               borderRadius: Constants.radius,
               borderColor: Colors.grey[300]!,

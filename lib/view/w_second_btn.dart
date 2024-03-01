@@ -36,6 +36,7 @@ class SecondBtn extends StatelessWidget {
         child: ElevatedButton(
           onPressed: onTap,
           style: ElevatedButton.styleFrom(
+            elevation: 1,
             backgroundColor: backgroundColor ?? Colors.white,
             shape: RoundedRectangleBorder(
               side: BorderSide(color: Colors.grey[200]!, width: 1),
@@ -46,7 +47,7 @@ class SecondBtn extends StatelessWidget {
             label,
             style: TextStyle(
               fontFamily: 'Gmarket',
-              color: Colors.white,
+              color: Colors.black,
               fontSize: 24,
               fontWeight: FontWeight.w500,
             ),
