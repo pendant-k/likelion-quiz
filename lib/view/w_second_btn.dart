@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:likelion_quiz/constants.dart';
-import 'package:likelion_quiz/palette.dart';
 
 /// [SecondBtn] is a custom widget that is used to create a button with a custom width, height, and background color.
 class SecondBtn extends StatelessWidget {
