@@ -19,31 +19,21 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,
-        title: Image.asset(
-          'images/logo_white.png',
-          width: 300,
-        ),
+        title: Image.asset('images/logo_white.png', width: 300),
         backgroundColor: Palette.MAINCOLOR,
       ),
       backgroundColor: Palette.background,
       body: Container(
         width: double.infinity,
-        padding: EdgeInsets.symmetric(
-          horizontal: 50,
-          vertical: 50,
-        ),
+        padding: EdgeInsets.symmetric(horizontal: 50, vertical: 50),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CircleAvatar(
-                  radius: 20,
-                ),
-                SizedBox(
-                  width: 20,
-                ),
+                CircleAvatar(radius: 20),
+                SizedBox(width: 20),
                 Text(
                   '성균관대학교 멋쟁이사자처럼',
                   style: TextStyle(
@@ -64,9 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: Colors.black,
               ),
             ),
-            SizedBox(
-              height: 80,
-            ),
+            SizedBox(height: 80),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -85,9 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
-            SizedBox(
-              height: 80,
-            ),
+            SizedBox(height: 80),
             MainBtn(
               onTap: () {
                 Get.to(() => QuizScreen());

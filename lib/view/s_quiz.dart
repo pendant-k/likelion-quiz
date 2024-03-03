@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:likelion_quiz/constants.dart';
 import 'package:likelion_quiz/model/quiz_model.dart';
 import 'package:likelion_quiz/palette.dart';
 import 'package:likelion_quiz/controller/quiz_controller.dart';
@@ -17,14 +18,20 @@ class QuizScreen extends StatefulWidget {
 }
 
 class _QuizScreenState extends State<QuizScreen> {
-  int _quizIndex = 0;
-  int _totalScore = 0;
-  int _time = 0;
+  var _remainingTime = 60;
   late Timer timer;
   // double minutes
   @override
   void initState() {
     super.initState();
+    timer = Timer.periodic(Duration(seconds: 1), (timer) {
+      setState(() {
+        if (timer.tick == 60) {
+          timer.cancel();
+        }
+        _remainingTime = 60 - timer.tick;
+      });
+    });
   }
 
   @override
@@ -51,6 +58,12 @@ class _QuizScreenState extends State<QuizScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            QuizProgressBar(
+              value: _remainingTime / 60,
+            ),
+            SizedBox(
+              height: 20,
+            ),
             if (quiz_list[_controller.quizIndex].type == QuizType.choice)
               Obx(
                 () => ChoiceQuiz(
@@ -61,7 +74,6 @@ class _QuizScreenState extends State<QuizScreen> {
                   label4: quiz_list[_controller.quizIndex].choice4!,
                 ),
               ),
-            if (quiz_list[_quizIndex].type == QuizType.short) Container(),
             Spacer(),
             MainBtn(
               label: "다음",
@@ -70,6 +82,48 @@ class _QuizScreenState extends State<QuizScreen> {
           ],
         ),
       ),
+    );
+  }
+}
+
+class QuizProgressBar extends StatelessWidget {
+  const QuizProgressBar({
+    super.key,
+    required this.value,
+  });
+  final double value;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text('남은 시간'),
+        SizedBox(
+          height: 10,
+        ),
+        SizedBox(
+          width: 500,
+          height: 20,
+          child: TweenAnimationBuilder<double>(
+            duration: Constants.duration,
+            curve: Curves.easeInOut,
+            tween: Tween<double>(
+              begin: 0,
+              end: value,
+            ),
+            builder: (context, value, _) => LinearProgressIndicator(
+              value: value,
+              backgroundColor: Colors.white,
+              color: Palette.btnBackground,
+              borderRadius: BorderRadius.circular(Constants.radius),
+            ),
+          ),
+          //  LinearProgressIndicator(
+          //   value: value,
+          // ),
+        ),
+      ],
     );
   }
 }
