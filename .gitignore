@@ -46,4 +46,11 @@ app.*.map.json
 # web files
 /web/
 
-# firebase files
+### Firebase ###
+.idea
+**/node_modules/*
+**/.firebaserc
+
+### Firebase Patch ###
+.runtimeconfig.json
+.firebase/
