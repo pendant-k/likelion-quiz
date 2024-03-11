@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: '2023 성균관대학교 멋쟁이사자처럼 퀴즈',
+      title: '성균관대학교 멋쟁이사자처럼 퀴즈',
       theme: ThemeData(
         useMaterial3: false,
         primaryColor: Palette.MAINCOLOR,
