@@ -50,8 +50,8 @@ class _QuizScreenState extends State<QuizScreen> {
         width: double.infinity,
         alignment: Alignment.center,
         padding: EdgeInsets.symmetric(
-          horizontal: 250,
-          vertical: 100,
+          horizontal: 200,
+          vertical: 30,
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -74,7 +74,7 @@ class _QuizScreenState extends State<QuizScreen> {
                   label4: quiz_list[_controller.quizIndex].choice4!,
                 ),
               ),
-            Spacer(),
+            SizedBox(height: 50),
             MainBtn(
               label: "다음",
               onTap: () => _controller.next(),
@@ -98,7 +98,13 @@ class QuizProgressBar extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text('남은 시간'),
+        Text(
+          '남은 시간',
+          style: TextStyle(
+            fontFamily: "Gmarket",
+            fontSize: 14,
+          ),
+        ),
         SizedBox(
           height: 10,
         ),

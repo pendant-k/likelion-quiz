@@ -62,7 +62,7 @@ class _ChoiceQuizState extends State<ChoiceQuiz> {
           ),
         ),
         SizedBox(
-          height: 50,
+          height: 30,
         ),
         SizedBox(
           width: 500,

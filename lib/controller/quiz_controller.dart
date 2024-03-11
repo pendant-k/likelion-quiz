@@ -57,6 +57,7 @@ class QuizController extends GetxController {
   get time => this._time.value;
 
   next() {
+    if (currentAnswer.isEmpty) return;
     if (currentAnswer == quiz_list[quizIndex].answer) {
       score++;
     }
