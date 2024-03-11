@@ -8,8 +8,8 @@ abstract class AbstractUserRepository {
   Future<void> createUser({
     required String name,
     required String phoneNumber,
-    required int remainTime,
-    required int point,
+    required int time,
+    required int score,
   });
 
   /// get all users
@@ -23,15 +23,15 @@ class UserReopsitory extends GetxService implements AbstractUserRepository {
   Future<void> createUser({
     required String name,
     required String phoneNumber,
-    required int remainTime,
-    required int point,
+    required int time,
+    required int score,
   }) async {
     try {
       db.collection('users').add({
         'name': name,
         'phoneNumber': phoneNumber,
-        'remainTime': remainTime,
-        'point': point,
+        'time': time,
+        'score': score,
       });
     } catch (e) {
       rethrow;
@@ -47,8 +47,8 @@ class UserReopsitory extends GetxService implements AbstractUserRepository {
                 id: e.id,
                 name: e['name'],
                 phoneNumber: e['phoneNumber'],
-                point: e['point'],
-                remainTime: e['remainTime'],
+                score: e['score'],
+                time: e['time'],
               ))
           .toList();
       return users;

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:likelion_quiz/palette.dart';
 import 'package:likelion_quiz/view/s_home.dart';
+import 'package:likelion_quiz/view/s_submit.dart';
 import 'package:likelion_quiz/view/w_main_btn.dart';
 import 'package:likelion_quiz/view/w_second_btn.dart';
 
@@ -56,7 +57,9 @@ class ResultScreen extends StatelessWidget {
               ),
               MainBtn(
                 label: "기록 남기기",
-                onTap: () {},
+                onTap: () {
+                  Get.to(() => SubmitScreen());
+                },
               ),
               SizedBox(height: 8),
               SecondBtn(

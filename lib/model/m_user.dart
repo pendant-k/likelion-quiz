@@ -9,17 +9,17 @@ class UserModel {
   /// [phoneNumber] is the phone number of the user
   String phoneNumber;
 
-  /// [point] is the point of the user
-  int point;
+  /// [score] is the point of the user
+  int score;
 
-  /// [remainTime] is the remain time of the user
-  int remainTime;
+  /// [time] is consumed time of the user
+  int time;
 
   UserModel({
     required this.id,
     required this.name,
     required this.phoneNumber,
-    required this.point,
-    required this.remainTime,
+    required this.score,
+    required this.time,
   });
 }
