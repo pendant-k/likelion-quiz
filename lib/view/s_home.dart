@@ -34,7 +34,11 @@ class _HomeScreenState extends State<HomeScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CircleAvatar(radius: 20),
+                CircleAvatar(
+                  radius: 25,
+                  backgroundImage: AssetImage('images/likelion_logo.png'),
+                  backgroundColor: Colors.white,
+                ),
                 SizedBox(width: 20),
                 Text(
                   '성균관대학교 멋쟁이사자처럼',
