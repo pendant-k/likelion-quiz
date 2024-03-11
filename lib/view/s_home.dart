@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:likelion_quiz/palette.dart';
+import 'package:likelion_quiz/view/s_dashboard.dart';
 import 'package:likelion_quiz/view/s_quiz.dart';
 import 'package:likelion_quiz/view/w_home_item.dart';
 import 'package:likelion_quiz/view/w_main_btn.dart';
+import 'package:likelion_quiz/view/w_second_btn.dart';
 
 /// 홈화면 위젯
 class HomeScreen extends StatefulWidget {
@@ -74,11 +76,26 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
             SizedBox(height: 80),
-            MainBtn(
-              onTap: () {
-                Get.to(() => QuizScreen());
-              },
-              label: '시작하기',
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                MainBtn(
+                  onTap: () {
+                    Get.to(() => QuizScreen());
+                  },
+                  label: '시작하기',
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                SecondBtn(
+                    label: "순위표 확인",
+                    onTap: () {
+                      Get.to(() => DashboardScreen());
+                    })
+              ],
             ),
           ],
         ),
